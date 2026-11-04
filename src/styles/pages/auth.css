@@ -1,0 +1,47 @@
+/* =========================================================
+   PÁGINAS DE ACCESO: login.html y reset-password.html
+   ========================================================= */
+.auth {
+  min-height: 100dvh; display: grid; grid-template-columns: 1.05fr 1fr;
+  background: var(--c-surface);
+}
+
+.auth__aside {
+  position: relative; overflow: hidden;
+  background: var(--c-lime); color: var(--c-forest);
+  padding: 40px 48px; display: flex; flex-direction: column; justify-content: space-between; gap: 32px;
+}
+.auth__aside .brand__name { font-size: 22px; }
+.auth__headline { font-size: clamp(32px, 4vw, 52px); font-weight: 800; letter-spacing: -.035em; line-height: 1.02; max-width: 12ch; }
+.auth__lead { font-size: 15px; max-width: 42ch; color: #2c4a2c; margin-top: 14px; }
+
+.auth__tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; max-width: 460px; }
+.auth__tile {
+  aspect-ratio: 1; border-radius: 22px; display: grid; place-items: center;
+  background: var(--c-forest); color: var(--c-lime);
+}
+.auth__tile:nth-child(2) { background: var(--c-primary); color: #fff; border-radius: 50%; }
+.auth__tile:nth-child(3) { background: #fffef4; color: var(--c-primary); }
+.auth__tile .icon { width: 40%; height: 40%; }
+.auth__deco {
+  position: absolute; right: -120px; top: -120px; width: 360px; height: 360px; border-radius: 50%;
+  border: 48px solid rgba(90, 122, 43, .18);
+}
+
+.auth__main { display: grid; place-items: center; padding: 40px 24px; }
+.auth__card { width: min(400px, 100%); display: flex; flex-direction: column; gap: 22px; }
+.auth__title { font-size: 28px; font-weight: 800; letter-spacing: -.03em; }
+.auth__subtitle { color: var(--c-muted); margin-top: 6px; }
+.auth__form { display: flex; flex-direction: column; gap: 16px; }
+.auth__form .btn { height: 46px; }
+.auth__link { background: none; border: 0; padding: 0; color: var(--c-primary); font-weight: 600; font-size: 13px; text-decoration: none; }
+.auth__link:hover { text-decoration: underline; }
+.auth__foot { font-size: 12.5px; color: var(--c-muted); text-align: center; }
+
+@media (max-width: 860px) {
+  .auth { grid-template-columns: 1fr; }
+  .auth__aside { padding: 24px 20px 28px; gap: 20px; }
+  .auth__tiles { display: none; }
+  .auth__headline { font-size: 32px; }
+  .auth__main { padding: 28px 16px 40px; align-items: start; }
+}

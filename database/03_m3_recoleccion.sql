@@ -1,0 +1,25 @@
+-- =========================================================
+-- 03 · M3 REGISTRO DE RECOLECCIÓN  (RF-12 … RF-18)
+-- Responsable: POR ASIGNAR
+-- Estado: PLANTILLA — completar por el responsable del módulo.
+-- =========================================================
+-- Tablas sugeridas:
+--   recolecciones          (cabecera) id, fecha, salon_id → salones, punto_id → puntos_recoleccion,
+--                          responsable_id → perfiles, observaciones, foto_ruta,
+--                          estado ('pendiente','validada','rechazada','anulada'),
+--                          comentario_validacion, periodo_id (usa public.periodo_de_fecha),
+--                          creado_por, created_at, actualizado_por, updated_at, validado_por, validado_at
+--   recoleccion_detalle    id, recoleccion_id, categoria_id → categorias_residuo, kg (> 0)
+--
+-- Reglas a implementar:
+--   RF-18: kg > 0 y fecha <= current_date (ver ejemplo en 06_m6_comercializacion.sql → ventas_reglas)
+--   RF-16: guardar quién y cuándo edita/anula (columnas *_por / *_at)
+--
+-- RLS sugerida (usa las funciones de 01_m1_seguridad.sql):
+--   select: public.rol_actual() is not null  (estudiantes: solo su salón)
+--   insert: public.tiene_rol('admin','docente','estudiante')
+--   update: public.tiene_rol('admin','docente')
+--
+-- Contrato con otros módulos:
+--   M4 necesita el total recolectado por categoría (solo recolecciones validadas).
+--   Sugerencia: crear la vista v_kg_recolectados_categoria(categoria_id, kg_recolectados).

@@ -1,0 +1,12 @@
+-- =========================================================
+-- 07 · M7 DASHBOARD DE INDICADORES  (RF-37 … RF-42)
+-- Responsable: POR ASIGNAR
+-- Estado: PLANTILLA — completar por el responsable del módulo.
+-- =========================================================
+-- El dashboard solo LEE. Se recomienda crear vistas (security_invoker = true)
+-- que agreguen los datos por periodo para no hacer cálculos pesados en JS.
+--
+-- Vistas ya disponibles:
+--   public.v_ventas_resumen         (M6) ventas con recolectora, periodo, kg y soportes
+--   public.v_kg_vendidos_categoria  (M6) kg e ingresos por categoría
+--   public.periodos                 (M2) usar es_actual = true para el filtro por defecto

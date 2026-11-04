@@ -1,0 +1,13 @@
+-- =========================================================
+-- 08 · M8 CONSULTAS Y REPORTES  (RF-43 … RF-46)
+-- Responsable: POR ASIGNAR
+-- Estado: PLANTILLA — completar por el responsable del módulo.
+-- =========================================================
+-- Reportes previstos: recolección por periodo/salón, ventas con soportes,
+-- bitácora de compost y consolidado para el Ministerio.
+--
+-- Para "ventas con soportes" ya existen:
+--   public.v_ventas_resumen   y   public.venta_soportes (ruta en el bucket 'soportes')
+-- Los enlaces a los recibos se generan en JS con:
+--   supabase.storage.from('soportes').createSignedUrl(ruta, segundos)
+-- (ver src/modules/m6-comercializacion/ventas.service.js → urlsFirmadas)

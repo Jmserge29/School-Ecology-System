@@ -1,0 +1,18 @@
+-- =========================================================
+-- 05 · M5 COMPOSTAJE Y HUERTO  (RF-23 … RF-30)
+-- Responsable: POR ASIGNAR
+-- Estado: PLANTILLA — completar por el responsable del módulo.
+-- =========================================================
+-- Tablas sugeridas:
+--   camas_huerto        id, nombre, ubicacion, area_m2, activo
+--   cultivos            id, cama_id, tipo ('fruto','verdura','planta'), especie, fecha_siembra,
+--                       cosecha_estimada, cosecha_real, cantidad_cosechada, estado
+--   lotes_compost       id, nombre, fecha_inicio, kg_organico_ingresado, estado ('activo','maduro','aplicado')
+--   bitacora_compost    id, lote_id, fecha, temperatura_c, humedad_pct, ph, olor, color,
+--                       plagas boolean, volteo boolean, calidad ('buena','regular','mala'),
+--                       foto_ruta, origen ('manual','sensor') default 'manual', registrado_por
+--   aplicaciones_compost id, lote_id, cama_id, fecha, kg
+--
+-- RF-29 (alertas): los rangos ya existen en la tabla public.configuracion, clave 'rangos_compost'
+--   {"temperatura":{"min":40,"max":65},"humedad":{"min":40,"max":60},"ph":{"min":6.5,"max":8.5}}
+--   Se editan desde M2 → Parámetros. En JS: getConfiguracion('rangos_compost') de catalogos.api.js

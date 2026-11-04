@@ -1,0 +1,29 @@
+-- =========================================================
+-- 04 · M4 CLASIFICACIÓN Y APROVECHAMIENTO  (RF-19 … RF-22)
+-- Responsable: POR ASIGNAR
+-- Estado: PLANTILLA — completar por el responsable del módulo.
+-- =========================================================
+-- Tablas sugeridas:
+--   lotes_almacenamiento        id, nombre ("Lote plástico octubre"), categoria_id, fecha_creacion, estado
+--   movimientos_aprovechamiento id, fecha, categoria_id, destino_id → destinos_aprovechamiento,
+--                               lote_id, kg (> 0), origen (texto/recoleccion_id), registrado_por, created_at
+--
+-- CONTRATO IMPORTANTE (RF-21 y RF-36):
+--   M6 (ventas) busca la vista  public.v_inventario_categoria  con estas columnas:
+--       categoria_id uuid, kg_recolectado numeric, kg_vendido numeric,
+--       kg_compostado numeric, kg_disponible numeric
+--   Cuando esta vista exista, la función guardar_venta() impedirá vender más
+--   kilos de los disponibles. Para kg_vendido usa la vista ya creada por M6:
+--       public.v_kg_vendidos_categoria (categoria_id, kg_vendidos, ingresos)
+--
+-- Ejemplo (ajustar a sus tablas):
+-- create or replace view public.v_inventario_categoria with (security_invoker = true) as
+-- select c.id as categoria_id,
+--        coalesce(r.kg_recolectados, 0) as kg_recolectado,
+--        coalesce(v.kg_vendidos, 0)     as kg_vendido,
+--        coalesce(k.kg_compostados, 0)  as kg_compostado,
+--        coalesce(r.kg_recolectados, 0) - coalesce(v.kg_vendidos, 0) - coalesce(k.kg_compostados, 0) as kg_disponible
+-- from public.categorias_residuo c
+-- left join public.v_kg_recolectados_categoria r on r.categoria_id = c.id
+-- left join public.v_kg_vendidos_categoria   v on v.categoria_id = c.id
+-- left join ( ... movimientos a compostaje ... ) k on k.categoria_id = c.id;

@@ -1,0 +1,57 @@
+/* =========================================================
+   TOKENS DE DISEÑO — EcoEscuela
+   Cambia aquí colores, radios y sombras: todo el sistema los usa.
+   ========================================================= */
+:root {
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  /* Superficies */
+  --c-bg: #f2f3ee;
+  --c-surface: #ffffff;
+  --c-surface-2: #f7f8f4;
+  --c-surface-3: #eef0e9;
+  --c-border: #e6e8e0;
+  --c-border-strong: #d3d8ca;
+
+  /* Texto */
+  --c-text: #17201a;
+  --c-text-2: #3c453e;
+  --c-muted: #737a70;
+
+  /* Marca */
+  --c-primary: #5a7a2b;
+  --c-primary-hover: #4a6721;
+  --c-primary-soft: #eaf1dc;
+  --c-lime: #d9e8a4;
+  --c-lime-soft: #f2f7e1;
+  --c-forest: #123d24;
+  --c-ink: #0f1712;
+
+  /* Estados */
+  --c-danger: #e0532f;
+  --c-danger-soft: #fdebe5;
+  --c-warning: #c98315;
+  --c-warning-soft: #fdf3e1;
+  --c-info: #3a7bbf;
+  --c-info-soft: #e6f0fa;
+  --c-success: #4b8f2c;
+  --c-success-soft: #e7f4df;
+
+  /* Forma */
+  --radius-sm: 10px;
+  --radius: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-pill: 999px;
+
+  --shadow-sm: 0 1px 2px rgba(20, 30, 20, .05);
+  --shadow: 0 6px 22px rgba(20, 35, 20, .06);
+  --shadow-lg: 0 28px 70px rgba(15, 30, 15, .20);
+
+  /* Texturas (barras rayadas como en la referencia) */
+  --hatch: repeating-linear-gradient(135deg, #e2e5dc 0 2px, #f5f6f2 2px 6px);
+  --hatch-primary: repeating-linear-gradient(135deg, #5a7a2b 0 2px, #71913d 2px 6px);
+
+  --ease: cubic-bezier(.2, .7, .2, 1);
+  --topbar-h: 76px;
+}

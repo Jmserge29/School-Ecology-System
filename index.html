@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EcoEscuela · Aprende a separar, compostar y reciclar</title>
+  <meta name="description" content="Guía para estudiantes: cómo separar los residuos con el código de colores de Colombia, cómo funciona el compost del huerto y cómo participa tu salón.">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/styles/tokens.css">
+  <link rel="stylesheet" href="src/styles/base.css">
+  <link rel="stylesheet" href="src/styles/components.css">
+  <link rel="stylesheet" href="src/styles/pages/landing.css">
+</head>
+<body class="landing">
+
+  <!-- ============ HERO ============ -->
+  <header class="lp-hero" id="inicio">
+    <nav class="lp-nav lp-wrap" aria-label="Principal">
+      <a class="lp-logo" href="#inicio" data-logo aria-label="EcoEscuela"></a>
+      <button class="lp-nav__toggle icon-btn" type="button" aria-expanded="false" aria-controls="lp-menu" aria-label="Abrir menú" data-icon="sliders"></button>
+      <div class="lp-nav__links" id="lp-menu">
+        <a href="#por-que">Por qué</a>
+        <a href="#clasifica">Clasifica</a>
+        <a href="#reto">Reto</a>
+        <a href="#compost">Compost</a>
+        <a href="#proceso">Proceso</a>
+        <a href="#preguntas">Preguntas</a>
+        <a class="btn btn--dark btn--sm" href="login.html">Ingresar</a>
+      </div>
+    </nav>
+
+    <div class="lp-hero__grid lp-wrap">
+      <div class="lp-hero__copy">
+        <span class="lp-eyebrow">Proyecto ambiental escolar</span>
+        <h1 class="lp-hero__title">Separa hoy, cosecha mañana</h1>
+        <p class="lp-hero__lead">Lo que tiras en el salón puede convertirse en abono para el huerto o en material que vuelve a la industria. Aprende a separar bien y ayuda a que tu colegio deje evidencia de su impacto.</p>
+        <div class="lp-hero__cta">
+          <a class="btn btn--dark" href="#clasifica">Aprende a clasificar</a>
+          <a class="btn btn--outline" href="login.html">Ingresar al sistema</a>
+        </div>
+      </div>
+
+      <div class="lp-hero__art" aria-hidden="true">
+        <figure class="lp-tile lp-tile--tall">
+          <svg viewBox="0 0 300 380" preserveAspectRatio="xMidYMid slice">
+            <defs>
+              <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6efc2"/><stop offset=".45" stop-color="#a9c46a"/><stop offset="1" stop-color="#2f5a26"/></linearGradient>
+              <radialGradient id="sun" cx=".7" cy=".12" r=".5"><stop offset="0" stop-color="#fffbe0" stop-opacity=".95"/><stop offset="1" stop-color="#fffbe0" stop-opacity="0"/></radialGradient>
+            </defs>
+            <rect width="300" height="380" fill="url(#sky)"/><rect width="300" height="380" fill="url(#sun)"/>
+            <g fill="#1d3b19">
+              <rect x="22" y="0" width="12" height="380"/><rect x="74" y="0" width="18" height="380"/><rect x="138" y="0" width="9" height="380"/>
+              <rect x="176" y="0" width="16" height="380"/><rect x="236" y="0" width="13" height="380"/><rect x="276" y="0" width="20" height="380"/>
+            </g>
+            <g stroke="#fffbe0" stroke-opacity=".28" stroke-width="10"><line x1="210" y1="0" x2="120" y2="380"/><line x1="235" y1="0" x2="190" y2="380"/></g>
+            <path d="M0 300c60-20 120 10 170-6s90-12 130 0v86H0z" fill="#3f7a2c"/>
+            <path d="M0 330c50-12 110 8 160-2s100-6 140 4v48H0z" fill="#2c5a20"/>
+          </svg>
+          <figcaption>Del salón al huerto</figcaption>
+        </figure>
+        <div class="lp-tile lp-tile--stat">
+          <span class="lp-tile__big">3</span>
+          <span>canecas, un solo hábito: <b>blanca, negra y verde</b></span>
+        </div>
+        <div class="lp-tile lp-tile--round" data-icon="recycle"></div>
+        <figure class="lp-tile lp-tile--wide">
+          <svg viewBox="0 0 300 180" preserveAspectRatio="xMidYMid slice">
+            <rect width="300" height="180" fill="#5a7a2b"/>
+            <g fill="#8fb339">
+              <path d="M40 180c0-40 10-70 30-90-4 34 2 62 10 90z"/><path d="M78 180c4-50 26-80 52-96-16 36-20 66-18 96z"/>
+              <path d="M150 180c-6-44 4-80 30-104-6 40-2 72 8 104z"/><path d="M210 180c6-36 24-62 50-74-14 26-20 50-18 74z"/>
+            </g>
+            <g fill="#d9e8a4"><circle cx="70" cy="92" r="7"/><circle cx="182" cy="78" r="6"/><circle cx="258" cy="108" r="5"/></g>
+            <rect y="150" width="300" height="30" fill="#3d2a17"/><rect y="150" width="300" height="6" fill="#5b3f22"/>
+          </svg>
+          <figcaption>Compost para nuestras camas</figcaption>
+        </figure>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ POR QUÉ ============ -->
+  <section class="lp-section lp-statement lp-wrap" id="por-que">
+    <h2 class="lp-h2">Raíces en la sostenibilidad, impulso para el cambio</h2>
+    <div class="lp-statement__body">
+      <span class="lp-blob lp-blob--left" aria-hidden="true" data-icon="sprout"></span>
+      <p>En nuestro colegio creemos que las pequeñas acciones crecen hasta volverse grandes impactos. Cada vez que separas una botella, aplanas una caja o llevas tus cáscaras al compost, estás ayudando a construir <mark>un futuro más verde.</mark></p>
+      <span class="lp-blob lp-blob--right" aria-hidden="true" data-icon="leaf"></span>
+    </div>
+    <div class="lp-facts">
+      <article><span class="lp-facts__icon" data-icon="recycle"></span><h3>Menos al relleno</h3><p>El material limpio y separado puede venderse a recolectoras y volver a ser materia prima en lugar de terminar enterrado.</p></article>
+      <article><span class="lp-facts__icon" data-icon="sprout"></span><h3>Abono para el huerto</h3><p>Los residuos orgánicos se transforman en compost que nutre las camas donde sembramos frutas, verduras y plantas.</p></article>
+      <article><span class="lp-facts__icon" data-icon="shield"></span><h3>Evidencia real</h3><p>Cada kilo queda registrado por salón, y cada venta con su recibo, para mostrar resultados verificables.</p></article>
+    </div>
+  </section>
+
+  <!-- ============ CLASIFICA ============ -->
+  <section class="lp-section lp-sorting" id="clasifica">
+    <div class="lp-wrap">
+      <div class="lp-section__head">
+        <span class="lp-eyebrow">Código de colores en Colombia</span>
+        <h2 class="lp-h2">¿En qué caneca va?</h2>
+        <p class="lp-lead">Desde 2021 todo el país usa el mismo código de colores para separar en la fuente (Resolución 2184 de 2019 del Ministerio de Ambiente). Apréndelo una vez y úsalo en el colegio y en tu casa.</p>
+      </div>
+      <div class="lp-bins">
+        <article class="lp-bin lp-bin--white">
+          <div class="lp-bin__lid"></div>
+          <div class="lp-bin__body">
+            <span class="lp-bin__tag">Caneca blanca</span>
+            <h3>Aprovechables</h3>
+            <p>Materiales <b>limpios y secos</b> que se pueden reciclar.</p>
+            <ul><li>Botellas y envases plásticos</li><li>Papel, cuadernos y periódico</li><li>Cajas de cartón aplanadas</li><li>Latas y metales</li><li>Frascos de vidrio</li></ul>
+            <p class="lp-bin__tip"><span data-icon="droplet"></span>Enjuaga y escurre los envases antes de botarlos.</p>
+          </div>
+        </article>
+        <article class="lp-bin lp-bin--black">
+          <div class="lp-bin__lid"></div>
+          <div class="lp-bin__body">
+            <span class="lp-bin__tag">Caneca negra</span>
+            <h3>No aprovechables</h3>
+            <p>Lo que <b>no</b> se puede reciclar ni compostar.</p>
+            <ul><li>Papel higiénico y servilletas usadas</li><li>Papeles y cartones con comida o grasa</li><li>Empaques metalizados (papas, galletas)</li><li>Icopor sucio</li></ul>
+            <p class="lp-bin__tip"><span data-icon="alert"></span>Si un reciclable está sucio de comida, va aquí.</p>
+          </div>
+        </article>
+        <article class="lp-bin lp-bin--green">
+          <div class="lp-bin__lid"></div>
+          <div class="lp-bin__body">
+            <span class="lp-bin__tag">Caneca verde</span>
+            <h3>Orgánicos aprovechables</h3>
+            <p>Restos que se convierten en <b>compost</b> para el huerto.</p>
+            <ul><li>Cáscaras de frutas y verduras</li><li>Restos de comida sin carne</li><li>Cáscaras de huevo</li><li>Hojas secas y residuos del jardín</li></ul>
+            <p class="lp-bin__tip"><span data-icon="sprout"></span>Sin bolsas plásticas: el compost no las digiere.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RETO ============ -->
+  <section class="lp-section lp-wrap" id="reto">
+    <div class="lp-quiz">
+      <div class="lp-quiz__intro">
+        <span class="lp-eyebrow">Ponte a prueba</span>
+        <h2 class="lp-h2">Reto: ¿sabes separar?</h2>
+        <p class="lp-lead">Elige la caneca correcta para cada residuo. Son 8 preguntas.</p>
+        <div class="lp-quiz__score" data-quiz="score" aria-live="polite"></div>
+      </div>
+      <div class="lp-quiz__card" data-quiz="card"></div>
+    </div>
+  </section>
+
+  <!-- ============ COMPOST ============ -->
+  <section class="lp-section lp-compost" id="compost">
+    <div class="lp-wrap">
+      <div class="lp-section__head">
+        <span class="lp-eyebrow">Huerto escolar</span>
+        <h2 class="lp-h2">Así se hace un buen compost</h2>
+        <p class="lp-lead">Los microorganismos descomponen los residuos orgánicos y los convierten en abono. Para que trabajen bien necesitan comida variada, aire y la humedad justa. Así lo registramos en la bitácora del huerto.</p>
+      </div>
+      <div class="lp-compost__grid">
+        <div class="lp-compost__lists">
+          <article class="lp-list lp-list--yes">
+            <h3><span data-icon="check"></span>Sí va al compost</h3>
+            <p class="lp-list__sub"><b>Verdes</b> (aportan nitrógeno)</p>
+            <ul><li>Cáscaras y restos de frutas y verduras</li><li>Cuncho de café y bolsitas de té sin grapa</li><li>Pasto recién cortado</li></ul>
+            <p class="lp-list__sub"><b>Cafés</b> (aportan carbono)</p>
+            <ul><li>Hojas secas y ramitas</li><li>Cartón sin tinta, en trozos pequeños</li><li>Cáscaras de huevo trituradas</li></ul>
+            <p class="lp-note">Truco: mezcla más o menos <b>2 partes de cafés por 1 de verdes</b>.</p>
+          </article>
+          <article class="lp-list lp-list--no">
+            <h3><span data-icon="x"></span>No va al compost</h3>
+            <ul><li>Carnes, pescado y huesos</li><li>Lácteos y comidas con aceite o grasa</li><li>Excrementos de mascotas</li><li>Plásticos, vidrio, metal o icopor</li><li>Plantas enfermas o con plaga</li></ul>
+            <p class="lp-note">Atraen plagas, generan malos olores o simplemente no se descomponen.</p>
+          </article>
+        </div>
+        <div class="lp-params">
+          <article><span data-icon="thermometer"></span><div><b>40 – 65 °C</b><p>Temperatura en la fase activa. Si está fría, le falta material verde o humedad.</p></div></article>
+          <article><span data-icon="droplet"></span><div><b>40 – 60 % de humedad</b><p>Prueba del puño: al apretarlo debe sentirse como una esponja escurrida.</p></div></article>
+          <article><span data-icon="flask"></span><div><b>pH 6,5 – 8,5</b><p>Cerca de neutro. Un olor ácido o a podrido indica falta de aire.</p></div></article>
+          <article><span data-icon="refresh"></span><div><b>Voltear cada 1 – 2 semanas</b><p>Le da oxígeno a la pila y acelera el proceso.</p></div></article>
+          <article><span data-icon="sprout"></span><div><b>Listo en 2 a 6 meses</b><p>Cuando está oscuro, huele a tierra húmeda y ya no se calienta.</p></div></article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROCESO ============ -->
+  <section class="lp-section lp-wrap" id="proceso">
+    <div class="lp-section__head">
+      <span class="lp-eyebrow">Cómo funciona en el colegio</span>
+      <h2 class="lp-h2">Del salón a los resultados</h2>
+      <p class="lp-lead">Cada paso queda registrado en EcoEscuela para que docentes, directivos y visitantes del Ministerio vean el impacto real.</p>
+    </div>
+    <ol class="lp-steps">
+      <li><span class="lp-steps__n">1</span><span data-icon="package"></span><h3>Recolecta y pesa</h3><p>El monitor ambiental del salón lleva el material al punto de recolección y registra los kilos por categoría.</p></li>
+      <li><span class="lp-steps__n">2</span><span data-icon="check-circle"></span><h3>Validación</h3><p>El docente revisa el registro y lo valida o lo devuelve con un comentario.</p></li>
+      <li><span class="lp-steps__n">3</span><span data-icon="recycle"></span><h3>Clasifica</h3><p>Lo reciclable se agrupa en lotes en la bodega; lo orgánico va a las composteras.</p></li>
+      <li><span class="lp-steps__n">4</span><span data-icon="receipt"></span><h3>Vende o composta</h3><p>El material se vende a una recolectora con recibo como soporte, y el compost alimenta el huerto.</p></li>
+      <li><span class="lp-steps__n">5</span><span data-icon="chart"></span><h3>Mide el impacto</h3><p>El dashboard muestra kilos por categoría, el ranking de salones y la evolución por periodo.</p></li>
+    </ol>
+  </section>
+
+  <!-- ============ ROLES ============ -->
+  <section class="lp-section lp-roles">
+    <div class="lp-wrap">
+      <div class="lp-section__head">
+        <h2 class="lp-h2">¿Qué hace cada quien?</h2>
+      </div>
+      <div class="lp-roles__grid">
+        <article><span data-icon="school"></span><h3>Estudiante monitor</h3><p>Registra la recolección de su salón y la bitácora diaria del compost.</p></article>
+        <article><span data-icon="book"></span><h3>Docente</h3><p>Acompaña al grupo, valida los registros y genera reportes.</p></article>
+        <article><span data-icon="shield"></span><h3>Coordinación</h3><p>Administra usuarios, catálogos y las ventas con sus soportes.</p></article>
+        <article><span data-icon="eye"></span><h3>Consulta</h3><p>Rectoría y visitantes revisan indicadores y soportes en modo lectura.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PREGUNTAS ============ -->
+  <section class="lp-section lp-wrap lp-faq" id="preguntas">
+    <h2 class="lp-h2" style="text-align:center">Preguntas frecuentes</h2>
+    <div class="lp-faq__list">
+      <details open>
+        <summary><span class="lp-faq__icon" data-icon="sprout"></span>¿Por qué es importante separar en la fuente?</summary>
+        <p>Porque un residuo mezclado se contamina: una botella con restos de comida ya no se puede vender, y un plástico dentro del compost lo arruina. Separar donde se genera el residuo es lo que permite aprovecharlo.</p>
+      </details>
+      <details>
+        <summary><span class="lp-faq__icon" data-icon="sprout"></span>¿Qué hago si no sé en qué caneca va algo?</summary>
+        <p>Pregúntate: ¿está limpio y seco y es plástico, papel, cartón, vidrio o metal? → blanca. ¿Es un resto de comida o del jardín? → verde. ¿Está sucio o es papel higiénico, servilleta o empaque metalizado? → negra. Si dudas, pregúntale al monitor ambiental de tu salón.</p>
+      </details>
+      <details>
+        <summary><span class="lp-faq__icon" data-icon="sprout"></span>¿Qué pasa con el dinero de las ventas?</summary>
+        <p>Cada venta queda registrada con la recolectora, los kilos, el precio y una foto o PDF del recibo. Esos soportes son evidencia del proyecto ante el Ministerio y el colegio decide cómo reinvertir los recursos.</p>
+      </details>
+      <details>
+        <summary><span class="lp-faq__icon" data-icon="sprout"></span>¿Cómo gana mi salón?</summary>
+        <p>El dashboard muestra un ranking de salones por kilos reciclados en cada periodo. Mientras mejor separen, más material válido suman.</p>
+      </details>
+      <details>
+        <summary><span class="lp-faq__icon" data-icon="sprout"></span>¿Cómo obtengo una cuenta?</summary>
+        <p>Las cuentas las crea la coordinación del proyecto. Si eres monitor ambiental de tu salón, pídesela a tu docente.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- ============ CTA OSCURO ============ -->
+  <section class="lp-dark">
+    <div class="lp-wrap lp-dark__grid">
+      <div>
+        <h2 class="lp-dark__title">Semillas de cambio para <mark>un futuro más verde</mark></h2>
+        <p>Únete al equipo de monitores ambientales de tu salón y ayuda a que cada kilo cuente.</p>
+        <div class="lp-hero__cta">
+          <a class="btn btn--primary" href="login.html">Ingresar a EcoEscuela</a>
+          <a class="btn lp-btn-ghost-light" href="#reto">Repetir el reto</a>
+        </div>
+      </div>
+      <figure class="lp-dark__art" aria-hidden="true">
+        <svg viewBox="0 0 400 260" preserveAspectRatio="xMidYMid slice">
+          <rect width="400" height="260" fill="#6f8f2a"/>
+          <g stroke="#a7c24a" stroke-width="10" fill="none" opacity=".9">
+            <path d="M-20 40c80 30 160 30 240 0s160-30 200 0"/><path d="M-20 80c80 30 160 30 240 0s160-30 200 0"/>
+            <path d="M-20 120c80 30 160 30 240 0s160-30 200 0"/><path d="M-20 160c80 30 160 30 240 0s160-30 200 0"/>
+            <path d="M-20 200c80 30 160 30 240 0s160-30 200 0"/><path d="M-20 240c80 30 160 30 240 0s160-30 200 0"/>
+          </g>
+          <g stroke="#d9e8a4" stroke-width="3" fill="none" opacity=".6">
+            <path d="M-20 60c80 30 160 30 240 0s160-30 200 0"/><path d="M-20 140c80 30 160 30 240 0s160-30 200 0"/><path d="M-20 220c80 30 160 30 240 0s160-30 200 0"/>
+          </g>
+        </svg>
+      </figure>
+    </div>
+    <footer class="lp-footer lp-wrap">
+      <a class="lp-logo lp-logo--light" href="#inicio" data-logo aria-label="EcoEscuela"></a>
+      <p>Sistema de Gestión de Residuos Sólidos · Proyecto ambiental escolar</p>
+      <p class="lp-footer__small">Código de colores según la Resolución 2184 de 2019 (MinAmbiente). © <span data-year></span></p>
+    </footer>
+  </section>
+
+  <script type="module" src="src/pages/landing.js"></script>
+</body>
+</html>

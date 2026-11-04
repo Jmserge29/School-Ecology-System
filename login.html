@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ingresar · EcoEscuela</title>
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/styles/tokens.css">
+  <link rel="stylesheet" href="src/styles/base.css">
+  <link rel="stylesheet" href="src/styles/components.css">
+  <link rel="stylesheet" href="src/styles/layout.css">
+  <link rel="stylesheet" href="src/styles/pages/auth.css">
+</head>
+<body>
+  <div class="auth">
+    <aside class="auth__aside">
+      <div class="auth__deco" aria-hidden="true"></div>
+      <a class="brand" href="index.html" id="brand"></a>
+      <div>
+        <h1 class="auth__headline">Separa hoy, cosecha mañana.</h1>
+        <p class="auth__lead">Registra la recolección de tu salón, el compost del huerto y las ventas de material reciclable con soportes verificables.</p>
+      </div>
+      <div class="auth__tiles" id="tiles" aria-hidden="true"></div>
+    </aside>
+
+    <main class="auth__main">
+      <div class="auth__card">
+        <div id="config-alert" hidden class="alert alert--warning">
+          <span>Falta configurar Supabase. Edita <code>src/config/env.js</code> con la URL y la anon key de tu proyecto (ver README).</span>
+        </div>
+        <div id="msg-alert" hidden class="alert"></div>
+
+        <!-- Iniciar sesión -->
+        <section id="view-login">
+          <div>
+            <h2 class="auth__title">Bienvenido de nuevo</h2>
+            <p class="auth__subtitle">Ingresa con tu correo institucional.</p>
+          </div>
+          <form class="auth__form" id="form-login" novalidate style="margin-top:22px">
+            <div class="field" data-field="email">
+              <label class="field__label" for="email">Correo</label>
+              <input class="input" id="email" name="email" type="email" autocomplete="email" placeholder="nombre@colegio.edu.co" required>
+              <span class="field__error"></span>
+            </div>
+            <div class="field" data-field="password">
+              <div class="row row--between">
+                <label class="field__label" for="password">Contraseña</label>
+                <button type="button" class="auth__link" data-view="recover">¿Olvidaste tu contraseña?</button>
+              </div>
+              <input class="input" id="password" name="password" type="password" autocomplete="current-password" required>
+              <span class="field__error"></span>
+            </div>
+            <button class="btn btn--primary btn--block" type="submit">Ingresar</button>
+          </form>
+        </section>
+
+        <!-- Recuperar contraseña (RF-02) -->
+        <section id="view-recover" hidden>
+          <div>
+            <h2 class="auth__title">Recuperar contraseña</h2>
+            <p class="auth__subtitle">Te enviaremos un enlace para crear una nueva contraseña.</p>
+          </div>
+          <form class="auth__form" id="form-recover" novalidate style="margin-top:22px">
+            <div class="field" data-field="email">
+              <label class="field__label" for="recover-email">Correo</label>
+              <input class="input" id="recover-email" name="email" type="email" autocomplete="email" required>
+              <span class="field__error"></span>
+            </div>
+            <button class="btn btn--primary btn--block" type="submit">Enviar enlace</button>
+            <button type="button" class="auth__link" data-view="login" style="align-self:center">← Volver a iniciar sesión</button>
+          </form>
+        </section>
+
+        <p class="auth__foot">¿Eres estudiante y no tienes cuenta? Pídela a tu docente o al coordinador ambiental.<br>
+          <a class="auth__link" href="index.html">Conoce el proyecto</a></p>
+      </div>
+    </main>
+  </div>
+  <script type="module" src="src/pages/login.js"></script>
+</body>
+</html>
